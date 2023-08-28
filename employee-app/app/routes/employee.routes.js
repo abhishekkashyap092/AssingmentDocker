@@ -3,7 +3,7 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
+    // Create a new Employee
     router.post("/", employee.create);
   
     // Retrieve all employee
@@ -12,13 +12,13 @@ module.exports = app => {
     // Retrieve all published employee
     router.get("/published", employee.findAllPublished);
   
-    // Retrieve a single Tutorial with id
+    // Retrieve a single Employee with id
     router.get("/:id", employee.findOne);
   
-    // Update a Tutorial with id
+    // Update a Employee with id
     router.put("/:id", employee.update);
   
-    // Delete a Tutorial with id
+    // Delete a Employee with id
     router.delete("/:id", employee.delete);
   
     // Delete all employee

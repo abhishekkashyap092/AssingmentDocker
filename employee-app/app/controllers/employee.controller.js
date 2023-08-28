@@ -6,9 +6,9 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.name) {
-    res.status(400).send({
-      message: "Content can not be empty!"
-    });
+    // res.status(400).send({
+    //   message: "Content can not be empty!"
+    // });
     return;
   }
 
@@ -24,6 +24,7 @@ exports.create = (req, res) => {
   // Save Employee in the database
   Employee.create(employee)
     .then(data => {
+      console.log(data)
       res.send(data);
     })
     .catch(err => {
