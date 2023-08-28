@@ -25,6 +25,29 @@ If you need to stop and remove all containers, networks, and all images used by 
 
 docker-compose down --rmi all
 
+url command
+curl --location 'http://localhost:6868/api/employee' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "mohit",
+    "age":  "27",
+    "salary": "9999",
+    "designation": "ed"
+
+}'
+
+curl --location 'http://localhost:6868/api/employee' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "kavir",
+    "age":  "27",
+    "salary": "9999",
+    "designation": "ed"
+
+}'
+
+
+
 
 API Routes
 http://localhost:6868/api/employee
